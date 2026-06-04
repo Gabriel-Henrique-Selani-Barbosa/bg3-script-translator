@@ -501,15 +501,6 @@ def restore(text, placeholders):
     return text
 
 
-import re as _re
-
-_TRANSLATION_SPACING_RE = _re.compile(r'([.!?])([A-Z])')
-
-def fix_translation_spacing(text):
-    """Corrige espaçamento faltante após pontuação (bug comum do Google Translate)."""
-    return _TRANSLATION_SPACING_RE.sub(r'\1 \2', text)
-
-
 def translate_text(text, translator, max_retries=3):
     if not text or not text.strip():
         return text
@@ -518,7 +509,7 @@ def translate_text(text, translator, max_retries=3):
         try:
             result = translator.translate(text)
             if result and result.strip():
-                return fix_translation_spacing(result)
+                return result
         except Exception as e:
             last_err = e
             if attempt < max_retries:
