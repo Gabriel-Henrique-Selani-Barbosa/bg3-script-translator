@@ -1,0 +1,109 @@
+[size=5][b][color=#FF9900]BG3 Script Translator[/color][/b][/size]
+
+[hr]
+
+[size=4][b][color=#FF9900]Description[/color][/b][/size]
+
+[b]BG3 Script Translator[/b] is a cross-platform localization tool that automatically translates [b]Baldur's Gate 3[/b] mod files to any language using Google Translate.
+
+Whether you want to play a mod in your native language or share your own mod with a global audience, this tool handles the heavy lifting: it extracts [i].pak[/i] files, translates [i].loca[/i] and [i].xml[/i] localization data, protects game tags and placeholders, and repacks everything back into a working [i].pak[/i] — all in a few clicks.
+
+[i]No manual file editing. No external converters. Just select your mod, pick a language, and translate.[/i]
+
+[hr]
+
+[size=4][b][color=#FF9900]Installation Instructions[/color][/b][/size]
+
+[size=3][b][color=#3399FF]Windows[/color][/b][/size]
+[list=1]
+[*]Download and install [b]Python 3.8+[/b] from [url=https://python.org/downloads]python.org[/url]
+[list]
+[*]Check [b]"Add Python to PATH"[/b] during installation
+[/list]
+[*]Extract the translator to any folder
+[*]Double-click [b]setup.bat[/b] to install dependencies
+[*]Launch the GUI: double-click [b]tradutor_bg3_gui.py[/b]
+[/list]
+
+[size=3][b][color=#3399FF]Linux (Bazzite / Fedora / Debian / Arch)[/color][/b][/size]
+[code]
+# 1. Extract the translator
+# 2. Run the installer
+chmod +x setup.sh
+./setup.sh
+
+# 3. Launch
+python3 tradutor_bg3_gui.py
+[/code]
+
+[size=3][b][color=#3399FF]Optional: Generate Standalone .exe (Windows Only)[/color][/b][/size]
+
+If you want to share the tool without requiring Python:
+[list=1]
+[*]Double-click [b]build_exe.bat[/b]
+[*]Two files will be generated:
+[list]
+[*][b]Tradutor_BG3.exe[/b] — CLI version
+[*][b]Tradutor_BG3_GUI.exe[/b] — GUI version (no terminal window)
+[/list]
+[*]Share these [i].exe[/i] files — no Python installation needed!
+[/list]
+
+[hr]
+
+[size=4][b][color=#FF9900]Main Features[/color][/b][/size]
+
+[list]
+[*][b]Modern Dark GUI[/b] — Clean, responsive interface built with CustomTkinter
+[*][b]CLI Mode[/b] — Full terminal support for scripting and automation
+[*][b].pak Extraction & Repacking[/b] — Works natively on Windows; on Linux, auto-detects Bottles/Wine
+[*][b]Batch Translation[/b] — Translate an entire folder of mods in one run
+[*][b]Auto Language Detection[/b] — Detects source language from folder names ([i]English/[/i], [i]Spanish/[/i], [i]Japanese/[/i], etc.)
+[*][b]Built-in LOCA Converter[/b] — Convert [i].loca[/i] / [i].locas[/i] ↔ XML without external tools
+[*][b]Tag Protection[/b] — Preserves [i]<content>[/i], [i]LSTags[/i], placeholders [i][1][/i], and line breaks during translation
+[*][b]Persistent Config[/b] — Saves your settings to JSON in the script folder
+[*][b]Multilingual UI[/b] — Interface available in [b]Portuguese[/b], [b]English[/b], and [b]Spanish[/b]
+[*][b]Automatic Backups[/b] — Original [i].pak[/i] files are saved to a [i]_backups/[/i] folder before overwriting
+[*][b]Silent Operations[/b] — On Windows, no CMD windows flash during [i].pak[/i] extraction or repacking
+[*][b]Cross-Platform[/b] — Windows (native) and Linux (via Bottles Flatpak)
+[/list]
+
+[hr]
+
+[size=4][b][color=#FF9900]Requirements[/color][/b][/size]
+
+[list]
+[*][b]Python 3.8 or newer[/b]
+[*][b]Internet connection[/b] (for Google Translate API)
+[*][b]LSLib / Divine.exe[/b] — Only needed if translating [i].pak[/i] files directly
+[list]
+[*]Download: [url=https://github.com/Norbyte/lslib/releases]Norbyte/lslib[/url]
+[*]On Linux: Bottles with [i]dotnetcoredesktop8[/i] dependency
+[/list]
+[/list]
+
+[size=3][b][color=#3399FF]Python Dependencies[/color][/b][/size] (auto-installed by setup scripts)
+[code]
+deep-translator>=1.11.0
+customtkinter>=5.2.0
+[/code]
+
+[hr]
+
+[size=4][b][color=#FF9900]Shout Outs[/color][/b][/size]
+
+[list]
+[*][b]Norbyte[/b] — For [url=https://github.com/Norbyte/lslib]LSLib[/url], the essential toolkit for BG3 modding that powers [i].pak[/i] extraction and repacking
+[*][b]Google Translate[/b] — Via [url=https://github.com/nidhaloff/deep-translator]deep-translator[/url] by Nidhaloff
+[*][b]CustomTkinter[/b] — For the modern, dark-themed GUI components
+[*][b]My girlfriend[/b] — For testing on Windows
+[/list]
+
+[hr]
+
+[size=4][b][color=#FF9900]Links[/color][/b][/size]
+
+[list]
+[*][url=https://github.com/Gabriel-Henrique-Selani-Barbosa/bg3-script-translator]Source Code & Issues[/url]
+[*][url=https://github.com/Norbyte/lslib/releases]LSLib Releases[/url]
+[/list]

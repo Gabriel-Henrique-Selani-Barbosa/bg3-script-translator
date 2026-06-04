@@ -76,37 +76,21 @@ chmod +x setup.sh
 
 ## How to Use
 
-### GUI Mode (Recommended)
+After running `setup.bat` (Windows) or `./setup.sh` (Linux), just double-click:
 
-#### Windows
-```cmd
-venv\Scripts\python tradutor_bg3_gui.py
-```
-Or double-click `tradutor_bg3_gui.py` if Python is associated.
+- **`run_gui.bat`** (Windows) / **`./run_gui.sh`** (Linux) — Graphical mode
+- **`run_cli.bat`** (Windows) / **`./run_cli.sh`** (Linux) — Terminal mode
 
-#### Linux / Mac
-```bash
-venv/bin/python tradutor_bg3_gui.py
-```
+The launchers automatically detect and use the virtual environment. No need to type paths manually!
 
-The GUI includes:
-- Mod/folder selection field
-- Language dropdown (16 pre-configured languages) + custom code input
-- LSLib field (Divine.exe) — with Auto-detect button
-- "Generate .loca" checkbox
-- "Batch mode (multiple mods)" checkbox
-- Save/Load/Clear Config buttons
-- Progress bar and real-time log
-- App language selector (PT/EN/ES)
-
-### CLI Mode
+### Manual execution (if preferred)
 
 ```bash
-# Linux/Mac
-venv/bin/python tradutor_bg3.py
-
 # Windows
-venv\Scripts\python tradutor_bg3.py
+venv\Scripts\python tradutor_bg3_gui.py
+
+# Linux / Mac
+venv/bin/python tradutor_bg3_gui.py
 ```
 
 ---
