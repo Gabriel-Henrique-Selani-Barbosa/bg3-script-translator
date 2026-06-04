@@ -1,0 +1,17 @@
+# Arquivos de configuração local
+tradutor_bg3_config.json
+
+# Distribuições ZIP
+*.zip
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ambientes virtuais
+venv/
+.env/
+
+# Logs
+*.log
