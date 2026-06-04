@@ -76,6 +76,8 @@ chmod +x setup.sh
 
 ## How to Use
 
+> **Note:** The `setup.bat` / `setup.sh` scripts automatically create a Python virtual environment (`venv` folder) in the script's directory. You do **not** need to create it manually.
+
 ### GUI Mode (Recommended)
 
 #### Windows
