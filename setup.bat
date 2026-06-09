@@ -1,31 +1,31 @@
 @echo off
 echo ==========================================
-echo  Instalador - Tradutor BG3
+echo  BG3 Script Translator - Installer
 echo ==========================================
 echo.
 
 where python >nul 2>nul
 if errorlevel 1 (
-    echo ERRO: Python nao encontrado!
-    echo Baixe e instale em: https://python.org/downloads
-    echo IMPORTANTE: Marque "Add Python to PATH" na instalacao
+    echo ERROR: Python not found!
+    echo Download and install from: https://python.org/downloads
+    echo IMPORTANT: Check "Add Python to PATH" during installation
     pause
     exit /b 1
 )
 
-echo Criando ambiente virtual (venv)...
+echo Creating virtual environment (venv)...
 python -m venv venv
 
-echo Instalando dependencias...
+echo Installing dependencies...
 venv\Scripts\pip install -r requirements.txt
 
 echo.
 echo ==========================================
-echo  Instalacao concluida!
+echo  Installation complete!
 echo ==========================================
 echo.
-echo Para executar o tradutor:
-echo   CLI: venv\Scripts\python tradutor_bg3.py
+echo To run the translator:
 echo   GUI: venv\Scripts\python tradutor_bg3_gui.py
+echo   CLI: venv\Scripts\python tradutor_bg3.py
 echo.
 pause
